@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
     <footer className="py-12 px-6 border-t border-white/5 bg-[#101010]" id="app_store">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex items-center gap-2">
-          <img src={`${import.meta.env.BASE_URL}assets/image/logo.png`} alt="logo" />
+          <img src={`${import.meta.env.BASE_URL}/assets/image/logo.png`} alt="logo" />
         </div>
 
         <nav className="flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
