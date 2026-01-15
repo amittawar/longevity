@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './components/Home';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsServices } from './components/TermsServices';
+import { Support } from './components/Support';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,9 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsServices />} />
+        <Route path="/support" element={<Support />} />
+
+
       </Routes>
     </Router>
   );

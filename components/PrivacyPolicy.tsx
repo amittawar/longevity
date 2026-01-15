@@ -12,7 +12,7 @@ export const PrivacyPolicy: React.FC = () => {
             <Header />
 
             <main className="relative z-10 pt-32 pb-20 px-6 md:px-12 max-w-5xl mx-auto text-gray-300 font-light leading-relaxed">
-                <h1 className="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter">
+                <h1 className="md:text-4xl text-3xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter">
                     Privacy Policy
                 </h1>
 
