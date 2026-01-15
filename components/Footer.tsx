@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
 
         <nav className="flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
           <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
-          <Link to="/terms-services" className="hover:text-white">Terms of Service</Link>
+          <Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link>
         </nav>
 
         <div className="flex gap-6">

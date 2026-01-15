@@ -17,126 +17,107 @@ export const PrivacyPolicy: React.FC = () => {
                 </h1>
 
                 <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Who are we?</h2>
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">1. Introduction</h2>
                     <p>
-                        Our website address is: <a href="https://mindovermatter.lu" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-colors">https://mindovermatter.lu</a>.
-                    </p>
-                    <p className="text-sm text-gray-400">See legal notices</p>
-                </section>
-
-                <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Contact form</h2>
-                    <p>
-                        The information collected on the contact forms is stored in a computer file by Mind Over Matter to respond to your information request. By submitting the form, you consent to our collection and processing of your personal data specifically for the purpose of your inquiry and any resulting business relationship.
+                        Welcome to <strong>Longevity</strong> ("we," "our," or "us"), a mobile application provided by <strong>Mind Over Matter</strong>. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App") available on iOS and Android.
                     </p>
                     <p>
-                        The legal basis for the processing is consent, obtained (buttons and checkboxes), freely given, clear and unambiguous in accordance with the applicable conditions which are defined in Articles 4 and 7 of the GDPR.
-                    </p>
-                    <p>
-                        The data processed includes identification data: first names, last names, and professional contact details. This data is collected directly from you via the contact form on our website.
-                    </p>
-                    <p>
-                        Your data is processed by the person in charge of commercial management, an authorized member of the staff of the company Mind Over Matter.
-                    </p>
-                    <p>
-                        Your personal data is kept for the time necessary to process your information request. It will be kept for 24 months from the last contact, then anonymized and kept for historical and statistical purposes for a period of 36 months, unless otherwise required by law.
+                        Longevity is a bodyweight training application featuring guided workouts, custom workout creation, step tracking, and AI-powered nutrition tracking. We are committed to protecting your privacy and ensuring you have a positive experience on our App.
                     </p>
                 </section>
 
                 <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Comments</h2>
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">2. Information We Collect</h2>
                     <p>
-                        When you leave a comment on our site, the data entered in the comment form, as well as your IP address and browser user agent, are collected to help us detect spam.
-                    </p>
-                    <p>
-                        An anonymized string created from your email address (also called a hash) may be sent to the Gravatar service to check if you are using it. The Gravatar service privacy policy is available here: <a href="https://automattic.com/privacy/" className="text-yellow-400 hover:underline">https://automattic.com/privacy/</a>. After your comment is approved, your profile picture will be publicly visible next to your comment.
-                    </p>
-                </section>
-
-                <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Media</h2>
-                    <p>
-                        If you upload images to the site, we advise you to avoid uploading images containing EXIF ​​GPS coordinate data. People visiting your site can download and extract location data from these images.
-                    </p>
-                </section>
-
-                <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Cookies</h2>
-                    <p>
-                        If you leave a comment on our site, you will be offered the option to save your name, email address, and website in cookies. This is solely for your convenience so you don't have to re-enter this information if you leave another comment later. These cookies expire after one year.
-                    </p>
-                    <p>
-                        If you visit the login page, a temporary cookie will be created to determine if your browser accepts cookies. This cookie contains no personal data and will be automatically deleted when you close your browser.
-                    </p>
-                    <p>
-                        When you log in, we will set several cookies to save your login information and screen preferences. Login cookies last for two days, and screen option cookies last for one year. If you select "Remember me," your login cookie will be stored for two weeks. If you log out of your account, the login cookie will be removed.
-                    </p>
-                    <p>
-                        When you edit or publish a post, an additional cookie will be saved in your browser. This cookie contains no personal data. It simply indicates the ID of the post you just edited. It expires after one day.
-                    </p>
-                </section>
-
-                <section className="mb-12 space-y-6">
-                    <h2 className="text-xl text-white font-bold uppercase tracking-wide">Refusing Cookies</h2>
-                    <p>
-                        The user is informed that cookies may be installed on their browser. In any case, the user can freely delete these cookies from their browser. Refusing to allow cookies may prevent access to certain services. However, users can configure their computer to refuse cookies.
+                        We collect information that you provide directly to us and information automatically collected when you use the App.
                     </p>
                     <ul className="list-disc pl-5 space-y-2 text-gray-400">
-                        <li><strong>Internet Explorer:</strong> Tools &gt; Internet Options &gt; Privacy &gt; Block all cookies.</li>
-                        <li><strong>Firefox:</strong> Options &gt; Privacy &gt; Use custom settings for history &gt; uncheck disable cookies.</li>
-                        <li><strong>Safari:</strong> Preferences &gt; Privacy &gt; Block cookies.</li>
-                        <li><strong>Chrome:</strong> Settings &gt; Advanced &gt; Privacy &gt; Content settings &gt; Block cookies.</li>
+                        <li><strong>Account Information:</strong> When you create an account, we may collect your name, email address, password, and profile picture.</li>
+                        <li><strong>Health & Fitness Data:</strong> We collect data you input or track, including bodyweight workout logs, exercise performance, custom workout routines, and step counts (via device sensors or integration with Apple Health/Google Fit).</li>
+                        <li><strong>Nutrition Data:</strong> Information you provide about your meals, including text descriptions or images, which are processed to generate nutrition metrics.</li>
+                        <li><strong>Device Information:</strong> We may collect information about your mobile device, including device model, operating system, unique device identifiers, and mobile network information.</li>
                     </ul>
                 </section>
 
                 <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Data Usage & Protection</h2>
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">3. Nutrition Tracking & AI Processing</h2>
                     <p>
-                        The personal data collected on this website will under no circumstances be distributed to third parties, nor sold, rented, or loaned. In accordance with French Law No. 78-17 of January 6, 1978, as amended in 2004, concerning information technology, data files, and civil liberties, this website has been registered with the French Data Protection Authority (CNIL) (www.cnil.fr) under number 1975885.
+                        Our App uses strictly necessary Large Language Models (LLMs) and Artificial Intelligence technologies to provide nutrition tracking features.
                     </p>
                     <p>
-                        The user is specifically informed that, in accordance with Article 32 of the same law, the information he provides through the order form on the site is necessary to respond to his request and is intended for the site publisher.
-                    </p>
-                    <p>
-                        For each of these processing operations, the user has the right to query, access, modify, object to and rectify personal data concerning him/her: it is possible to request that this data be rectified, completed, clarified, updated or erased.
-                    </p>
-                    <p>
-                        These rights can be exercised by simply sending an email using this contact form or by mail to <strong>42 Rue de la Croix, 9216 Diekirch, Luxembourg</strong>.
+                        When you use the nutrition tracking feature, the text descriptions or images of food you upload are processed by our AI algorithms to estimate nutritional values (calories, macronutrients, etc.). This data is processed securely and is used solely to provide you with nutrition insights. We do not use your personal health data to train public AI models without your explicit consent.
                     </p>
                 </section>
 
                 <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Content embedded from other websites</h2>
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">4. Subscriptions & Payments</h2>
                     <p>
-                        Articles on this site may include embedded content (e.g., videos, images, articles, etc.). Embedded content from other websites behaves in the same way as if the visitor had visited that other website.
+                        Longevity offers premium features through in-app subscriptions.
                     </p>
                     <p>
-                        These websites may collect data about you, use cookies, embed third-party tracking tools, and monitor your interactions with this embedded content if you have an account and are logged in to their website.
-                    </p>
-                </section>
-
-                <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Data storage periods</h2>
-                    <p>
-                        We do not retain personal data longer than necessary to achieve the specific purposes for which the information was collected. Personal data is retained for an appropriate period of time for each type of data. These retention periods may vary depending on the purpose of the data collection.
+                        <strong>Payment Processing:</strong> We do not collect or store your payment card information. All subscription transactions are handled directly by the Apple App Store (iOS) or Google Play Store (Android). You should review their privacy policies regarding payment data.
                     </p>
                     <p>
-                        The maximum retention period for personal data is 2 years.
+                        We receive only a confirmation of your subscription status and expiration date to unlock premium features within the App.
                     </p>
                 </section>
 
                 <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Your rights over your data</h2>
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">5. How We Use Your Information</h2>
                     <p>
-                        If you have sent us a message via one of our contact forms, you can request to receive a file containing all the personal data we hold about you, including the data you have provided to us. You can also request the deletion of your personal data. This does not include data stored for administrative, legal, or security purposes.
+                        We use the information we collect to:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-2 text-gray-400">
+                        <li>Provide, maintain, and improve the App's functionality.</li>
+                        <li>Personalize your workout and nutrition experience.</li>
+                        <li>Process and categorize your workout and nutrition data.</li>
+                        <li>Sync your data across devices.</li>
+                        <li>Respond to your comments, questions, and customer service requests.</li>
+                    </ul>
+                </section>
+
+                <section className="mb-12 space-y-6">
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">6. Data Sharing & Disclosure</h2>
+                    <p>
+                        We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. We may share data with trusted third-party service providers who assist us in operating our App, conducting our business, or serving our users, so long as those parties agree to keep this information confidential.
+                    </p>
+                    <p>
+                        This includes cloud hosting providers and AI processing partners strictly for the purpose of delivering App features.
                     </p>
                 </section>
 
                 <section className="mb-12 space-y-6">
-                    <h2 className="text-2xl text-white font-bold uppercase tracking-wide">Transmission of your personal data</h2>
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">7. Data Security</h2>
                     <p>
-                        Your personal data is not transmitted to services external to Mind Over Matter.
+                        We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, please be aware that no method of transmission over the internet or method of electronic storage is 100% secure.
                     </p>
+                </section>
+
+                <section className="mb-12 space-y-6">
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">8. Your Rights</h2>
+                    <p>
+                        Depending on your location, you may have the right to access, correct, delete, or restrict the processing of your personal data held by us. You can manage most of your data directly within the App settings. For account deletion requests or other inquiries, please contact us.
+                    </p>
+                </section>
+
+                <section className="mb-12 space-y-6">
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">9. Changes to This Policy</h2>
+                    <p>
+                        We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
+                    </p>
+                </section>
+
+                <section className="mb-12 space-y-6">
+                    <h2 className="md:text-2xl text-white font-bold uppercase tracking-wide">10. Contact Us</h2>
+                    <p>
+                        If you have any questions about this Privacy Policy or our practices, please contact us at:
+                    </p>
+                    <address className="not-italic text-white">
+                        Mind Over Matter<br />
+                        42 Rue de la Croix<br />
+                        9216 Diekirch, Luxembourg<br />
+                        <a href="mailto:support@mindovermatter.lu" className="text-yellow-400 hover:text-yellow-300 transition-colors">support@mindovermatter.lu</a>
+                    </address>
                 </section>
             </main>
 

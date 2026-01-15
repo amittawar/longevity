@@ -21,7 +21,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({
   reversed
 }) => {
   return (
-    <section id={id} className="py-24 px-6 relative overflow-hidden">
+    <section id={id} className="md:py-10 py-6 px-6 relative overflow-hidden">
       <div className={`max-w-7xl mx-auto flex flex-col ${reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-32`}>
 
         <div className="flex-1 w-full lg:max-w-lg">
@@ -44,7 +44,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({
               </React.Fragment>
             ))}
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed font-medium">
+          <p className="text-gray-400 md:text-lg leading-relaxed font-medium">
             {description}
           </p>
         </div>
