@@ -79,10 +79,10 @@ export const Support: React.FC = () => {
                             <Mail size={22} />
                         </div>
                         <a
-                            href="mailto:amitnetmax903@gmail.com"
+                            href="mailto:info@longevitymind.app"
                             className="text-white text-lg hover:text-yellow-400 transition"
                         >
-                            amitnetmax903@gmail.com
+                            info@longevitymind.app
                         </a>
                     </div>
                 </div>

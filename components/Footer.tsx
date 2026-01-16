@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <img src={`${import.meta.env.BASE_URL}assets/image/logo.png`} alt="logo" />
         </div>
 
-        <nav className="flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+        <nav className="md:flex grid grid-cols-1 text-center gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
           <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
           <Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link>
           <Link to="/support" className="hover:text-white">Support</Link>

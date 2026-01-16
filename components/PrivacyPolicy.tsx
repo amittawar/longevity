@@ -116,7 +116,7 @@ export const PrivacyPolicy: React.FC = () => {
                         Mind Over Matter<br />
                         42 Rue de la Croix<br />
                         9216 Diekirch, Luxembourg<br />
-                        <a href="mailto:support@mindovermatter.lu" className="text-yellow-400 hover:text-yellow-300 transition-colors">support@mindovermatter.lu</a>
+                        <a href="mailto:info@longevitymind.app" className="text-yellow-400 hover:text-yellow-300 transition-colors">info@longevitymind.app</a>
                     </address>
                 </section>
             </main>
