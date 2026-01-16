@@ -25,43 +25,33 @@ export const Support: React.FC = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
-        if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-            alert('Please fill all fields');
-            return;
-        }
 
         setLoading(true);
 
-        emailjs
-            .send(
-                'YOUR_SERVICE_ID',      // 🔴 replace
-                'YOUR_TEMPLATE_ID',     // 🔴 replace
-                {
-                    name: formData.name,
-                    email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_email: 'amitnetmax903@gmail.com',
-                },
-                'YOUR_PUBLIC_KEY'       // 🔴 replace
-            )
-            .then(() => {
-                alert('Message sent successfully!');
-                setFormData({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                });
-            })
-            .catch(() => {
-                alert('Failed to send message!');
-            })
-            .finally(() => setLoading(false));
+        const res = await fetch(
+            "https://longevitymind.app/support-mail.php",
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            }
+        );
+
+        const data = await res.json();
+
+        if (data.success) {
+            // ✅ Redirect after success
+            window.location.href = "/thank-you";
+            setFormData({ name: "", email: "", subject: "", message: "" });
+        } else {
+            alert("Mail failed!");
+        }
+
+        setLoading(false);
     };
+
 
     return (
         <div className="relative bg-black min-h-screen font-sans">
@@ -138,10 +128,10 @@ export const Support: React.FC = () => {
                                     className="w-full bg-[#1A1A1A] border border-white/5 rounded-xl px-4 py-3 text-white appearance-none"
                                 >
                                     <option value="">Select a topic</option>
-                                    <option>General Inquiry</option>
-                                    <option>Technical Support</option>
-                                    <option>Billing</option>
-                                    <option>Partnership</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Billing">Billing</option>
+                                    <option value="Partnership">Partnership</option>
                                 </select>
                                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500" size={16} />
                             </div>
