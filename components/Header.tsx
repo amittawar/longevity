@@ -1,10 +1,20 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Header: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const languages = [
+    { code: 'en', label: 'EN' },
+    { code: 'fr', label: 'FR' },
+    { code: 'es', label: 'ES' },
+    { code: 'lb', label: 'LB' },
+    { code: 'pt', label: 'PT' },
+  ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -17,27 +27,43 @@ export const Header: React.FC = () => {
         {/* Logo Section */}
         <div className="relative z-10 mr-2 md:mr-0">
           <Link to="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-            <div className="w-9 h-9 text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.4)]">
+            <div className="text-yellow-400">
               <img src={`${import.meta.env.BASE_URL}assets/image/logo.png`} alt="logo" />
             </div>
-            <span className="text-white font-black text-lg tracking-tighter uppercase leading-none pt-0.5">
+            {/* <span className="text-white font-black text-lg tracking-tighter uppercase leading-none pt-0.5">
               Longevity
-            </span>
+            </span> */}
           </Link>
         </div>
 
         {/* Navigation Links (Desktop) */}
         <nav className="hidden lg:flex items-center gap-10 relative z-10">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/#how-it-works">How it works</NavLink>
-          <NavLink href="/#philosophy">Our philosophy</NavLink>
+          <NavLink href="/">{t('home')}</NavLink>
+          <NavLink href="/#how-it-works">{t('how_it_works')}</NavLink>
+          <NavLink href="/#philosophy">{t('our_philosophy')}</NavLink>
         </nav>
 
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center gap-4 relative z-10">
+          {/* Language Switcher */}
+          <div className="hidden sm:flex items-center gap-1 bg-white/5 rounded-full px-3 py-1.5 border border-white/10 backdrop-blur-sm">
+            <Globe size={14} className="text-gray-400" />
+            <select
+              value={i18n.language}
+              onChange={(e) => i18n.changeLanguage(e.target.value)}
+              className="bg-transparent text-gray-300 text-[10px] font-bold uppercase tracking-wider outline-none border-none cursor-pointer"
+            >
+              {languages.map((lang) => (
+                <option key={lang.code} value={lang.code} className="text-black">
+                  {lang.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div className="hidden sm:block">
             <button className="bg-white text-black px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.1em] hover:bg-gray-200 transition-all active:scale-95 shadow-lg">
-              <Link to="/#app_store">Download</Link>
+              <Link to="/#app_store">{t('download')}</Link>
             </button>
           </div>
 
@@ -54,9 +80,25 @@ export const Header: React.FC = () => {
 
       {/* Mobile Menu Dropdown */}
       <div className={`absolute top-full left-0 w-full mt-4 bg-black/90 backdrop-blur-3xl border border-white/10 rounded-3xl p-6 flex flex-col gap-2 shadow-2xl lg:hidden transform transition-all duration-300 origin-top ${isMenuOpen ? 'opacity-100 scale-100 translate-y-0 visible' : 'opacity-0 scale-95 -translate-y-4 invisible'}`}>
-        <MobileNavLink href="/" onClick={toggleMenu}>Home</MobileNavLink>
-        <MobileNavLink href="/#how-it-works" onClick={toggleMenu}>How it works</MobileNavLink>
-        <MobileNavLink href="/#philosophy" onClick={toggleMenu}>Our philosophy</MobileNavLink>
+        <MobileNavLink href="/" onClick={toggleMenu}>{t('home')}</MobileNavLink>
+        <MobileNavLink href="/#how-it-works" onClick={toggleMenu}>{t('how_it_works')}</MobileNavLink>
+        <MobileNavLink href="/#philosophy" onClick={toggleMenu}>{t('our_philosophy')}</MobileNavLink>
+
+        {/* Mobile Language Switcher */}
+        <div className="flex items-center gap-2 px-4 py-2">
+          <Globe size={16} className="text-gray-400" />
+          <div className="flex gap-4">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => i18n.changeLanguage(lang.code)}
+                className={`text-xs font-bold uppercase ${i18n.language === lang.code ? 'text-white' : 'text-gray-500'}`}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <div className="h-px bg-white/10 my-2" />
 
@@ -65,7 +107,7 @@ export const Header: React.FC = () => {
           onClick={toggleMenu}
           className="bg-white text-black w-full py-4 rounded-xl text-center text-xs font-black uppercase tracking-[0.1em] hover:bg-gray-200 transition-colors"
         >
-          Download App
+          {t('download_app')}
         </Link>
       </div>
     </div>

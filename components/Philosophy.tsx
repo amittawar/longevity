@@ -1,36 +1,38 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Dumbbell, Target, Shield, RotateCcw } from 'lucide-react';
 
 export const Philosophy: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="philosophy" className="py-24 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col mb-16">
           <h2 className="text-3xl md:text-4xl font-heading">
-            THE LONGEVITY PHILOSOPHY
+            {t('philosophy_title')}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <PhilosophyItem 
+          <PhilosophyItem
             icon={<Dumbbell className="w-6 h-6" />}
-            title="ABSOLUTE STRENGTH"
-            description="Build functional power for the real world. Strength should give you freedom, not limits."
+            title={t('absolute_strength')}
+            description={t('absolute_strength_desc')}
           />
-          <PhilosophyItem 
+          <PhilosophyItem
             icon={<Target className="w-6 h-6" />}
-            title="MENTAL CLARITY"
-            description="A resilient body builds a resilient mind. Exercise is the ultimate tool for focus."
+            title={t('mental_clarity')}
+            description={t('mental_clarity_desc')}
           />
-          <PhilosophyItem 
+          <PhilosophyItem
             icon={<Shield className="w-6 h-6" />}
-            title="HEALTH FOCUSED"
-            description="Train smart, not just hard. Balance your load and nutrition to support long-term heart health."
+            title={t('health_focused')}
+            description={t('health_focused_desc')}
           />
-          <PhilosophyItem 
+          <PhilosophyItem
             icon={<RotateCcw className="w-6 h-6" />}
-            title="DISCIPLINE FOREVER"
-            description="Motivation is temporary; habit is permanent. Build a consistency that lasts a lifetime."
+            title={t('discipline_forever')}
+            description={t('discipline_forever_desc')}
           />
         </div>
       </div>
@@ -42,8 +44,8 @@ const PhilosophyItem: React.FC<{ icon: React.ReactElement, title: string, descri
   return (
     <div className="group space-y-6 cursor-default">
       <div className="w-12 h-12 bg-white/5 flex items-center justify-center rounded-xl text-gray-300 transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-black">
-        {React.cloneElement(icon, { 
-          className: "w-6 h-6 transition-colors duration-300" 
+        {React.cloneElement(icon, {
+          className: "w-6 h-6 transition-colors duration-300"
         })}
       </div>
       <h3 className="text-sm font-bold tracking-widest uppercase transition-colors duration-300 group-hover:text-yellow-400">

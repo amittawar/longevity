@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Header } from './Header';
 import { Hero } from './Hero';
 import { FeatureSection } from './FeatureSection';
@@ -10,6 +11,7 @@ import { Footer } from './Footer';
 import { useLocation } from 'react-router-dom';
 
 export const Home: React.FC = () => {
+    const { t } = useTranslation();
     const [scrollY, setScrollY] = useState(0);
     const { hash } = useLocation();
 
@@ -44,36 +46,36 @@ export const Home: React.FC = () => {
 
                 <FeatureSection
                     id="how-it-works"
-                    tag="GUIDED WORKOUTS"
-                    title="YOUR ROADMAP TO STRENGTH"
-                    description="Stop guessing what to do next. Our program is built on the essential movements the human body was designed for like squats, pushups, and pullups. You start at a level that fits your current ability and unlock harder variations only when you are ready. It's a safe, logical way to build strength without skipping steps."
+                    tag={t('guided_workouts')}
+                    title={t('roadmap_strength')}
+                    description={t('roadmap_desc')}
                     type="workout-list"
                     imageSrc={`${import.meta.env.BASE_URL}assets/image/app_screen2.png`}
                     reversed={false}
                 />
 
                 <FeatureSection
-                    tag="CUSTOM WORKOUTS"
-                    title="DESIGN YOUR OWN ROUTINE"
-                    description="Whether you have ten minutes for a quick mobility check or an hour for deep work, you can design workouts that fit your specific schedule and goals for the day."
+                    tag={t('custom_workouts')}
+                    title={t('design_routine')}
+                    description={t('design_routine_desc')}
                     type="timer-screen"
                     imageSrc={`${import.meta.env.BASE_URL}assets/image/app_screen3.png`}
                     reversed={true}
                 />
 
                 <FeatureSection
-                    tag="STEP TRACKING"
-                    title="MAKE EVERY STEP COUNTS"
-                    description="A workout works best when you stay active the rest of the day. Our tracker keeps your daily movement visible, giving you the awareness you need to get up, stay loose, and speed up your recovery between sessions."
+                    tag={t('step_tracking')}
+                    title={t('make_steps_count')}
+                    description={t('make_steps_count_desc')}
                     type="steps-tracking"
                     imageSrc={`${import.meta.env.BASE_URL}assets/image/app_screen4.png`}
                     reversed={false}
                 />
 
                 <FeatureSection
-                    tag="AI-POWERED NUTRITION"
-                    title="MAKE SMARTER MEAL CHOICES"
-                    description="Good nutrition starts with awareness. We help you keep your calories in check and break down key nutrients like protein and fats. By understanding exactly what you consume, you can make smarter choices that support a strong, healthy body."
+                    tag={t('ai_nutrition')}
+                    title={t('smarter_choices')}
+                    description={t('smarter_choices_desc')}
                     type="nutrition-log"
                     imageSrc={`${import.meta.env.BASE_URL}assets/image/app_screen5.png`}
                     reversed={true}

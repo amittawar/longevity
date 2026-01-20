@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Play } from 'lucide-react';
 import { PhoneMockup } from './PhoneMockup';
 
 export const Hero: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <section className="relative pt-40 pb-20 px-6 overflow-hidden bg-[url('assets/image/hero_bg.png')] bg-cover bg-center">
@@ -14,19 +16,19 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col mb-8 items-start">
               <div className="inline-flex items-center px-6 py-2.5 border border-yellow-400/40 rounded-full bg-yellow-400/5 backdrop-blur-md">
                 <span className="text-yellow-400 text-[10px] font-bold tracking-[0.3em] uppercase">
-                  BODYWEIGHT TRAINING APP
+                  {t('bodyweight_training_app')}
                 </span>
               </div>
             </div>
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading leading-[1.0] mb-10 flex flex-col">
-              <span>BUILD</span>
-              <span className="text-yellow-400">STRENGTH</span>
-              <span>THAT LASTS</span>
+              <span>{t('build')}</span>
+              <span className="text-yellow-400">{t('strength')}</span>
+              <span>{t('that_lasts')}</span>
             </h1>
 
             <p className="text-gray-400 text-lg md:text-xl max-w-md mb-10 font-medium leading-relaxed">
-              Combine guided training with smart nutrition tracking to get strong and enjoy life.
+              {t('hero_description')}
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -59,6 +61,7 @@ export const Hero: React.FC = () => {
 };
 
 const AppStoreButton: React.FC<{ platform: 'apple' | 'google' }> = ({ platform }) => {
+  const { t } = useTranslation();
   const isApple = platform === 'apple';
   return (
     <button className="flex items-center gap-3 bg-white/5 border border-white/10 px-5 md:px-6 py-3 rounded-xl hover:bg-white/10 transition-colors group">
@@ -73,10 +76,10 @@ const AppStoreButton: React.FC<{ platform: 'apple' | 'google' }> = ({ platform }
       )}
       <div className="text-left">
         <div className="text-[9px] md:text-[10px] uppercase font-bold text-gray-400 group-hover:text-white transition-colors">
-          {isApple ? 'Download on the' : 'Get it on'}
+          {isApple ? t('download_on_the') : t('get_it_on')}
         </div>
         <div className="text-xs md:text-sm font-bold tracking-tight">
-          {isApple ? 'App Store' : 'Google Play'}
+          {isApple ? t('app_store') : t('google_play')}
         </div>
       </div>
     </button>

@@ -1,9 +1,11 @@
 
 import React from 'react';
 import { Instagram } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <footer className="py-12 px-6 border-t border-white/5 bg-[#101010]" id="app_store">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
@@ -12,9 +14,9 @@ export const Footer: React.FC = () => {
         </div>
 
         <nav className="md:flex grid grid-cols-1 text-center gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
-          <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
-          <Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link>
-          <Link to="/support" className="hover:text-white">Support</Link>
+          <Link to="/privacy-policy" className="hover:text-white">{t('privacy_policy')}</Link>
+          <Link to="/terms-of-service" className="hover:text-white">{t('terms_of_service')}</Link>
+          <Link to="/support" className="hover:text-white">{t('support')}</Link>
         </nav>
 
         <div className="flex gap-6">
