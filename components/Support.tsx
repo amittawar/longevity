@@ -91,10 +91,10 @@ export const Support: React.FC = () => {
                 <div className="w-full lg:max-w-lg">
                     <div className="bg-[#121212] border border-white/5 rounded-3xl p-8 md:p-10 shadow-2xl">
 
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} className="contactForm">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                 <li className="list-none">
-                                    <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1">Name</label>
+                                    <label className="text-[12px] font-bold uppercase tracking-widest text-gray-500 ml-1">Name</label>
                                     <input
                                         type="text"
                                         name="name"
@@ -107,7 +107,7 @@ export const Support: React.FC = () => {
 
 
                                 <li className="list-none">
-                                    <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1">Email Address</label>
+                                    <label className="text-[12px] font-bold uppercase tracking-widest text-gray-500 ml-1">Email Address</label>
                                     <input
                                         type="email"
                                         name="email"
@@ -120,14 +120,14 @@ export const Support: React.FC = () => {
                             </div>
 
                             <div className="relative mb-6">
-                                <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1">Subject</label>
+                                <label className="text-[12px] font-bold uppercase tracking-widest text-gray-500 ml-1">Subject</label>
                                 <select
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
                                     className="w-full bg-[#1A1A1A] border border-white/5 rounded-xl px-4 py-3 text-white appearance-none"
                                 >
-                                    <option value="">Select a topic</option>
+                                    <option value="" className="placeLabel">Select a topic</option>
                                     <option value="General Inquiry">General Inquiry</option>
                                     <option value="Technical Support">Technical Support</option>
                                     <option value="Billing">Billing</option>

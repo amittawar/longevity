@@ -25,10 +25,10 @@ export const Header: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-white/5 pointer-events-none" />
 
         {/* Logo Section */}
-        <div className="relative z-10 mr-2 md:mr-0">
+        <div className="relative z-10 mr-2 md:mr-0 header-logo">
           <Link to="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
             <div className="text-yellow-400">
-              <img src={`${import.meta.env.BASE_URL}assets/image/logo.png`} alt="logo" />
+              <img src={`${import.meta.env.BASE_URL}assets/image/logo1.png`} alt="logo" />
             </div>
             {/* <span className="text-white font-black text-lg tracking-tighter uppercase leading-none pt-0.5">
               Longevity
