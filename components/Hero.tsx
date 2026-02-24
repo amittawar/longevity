@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Play } from 'lucide-react';
 import { PhoneMockup } from './PhoneMockup';
+import { Link } from 'react-router-dom';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -32,8 +33,8 @@ export const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <AppStoreButton platform="apple" />
-              <AppStoreButton platform="google" />
+              <Link to="https://apps.apple.com/in/app/longevity-mind/id6757175237" target="_blank"><AppStoreButton platform="apple" /></Link>
+              <Link to="https://play.google.com/store/apps/details?id=com.netmaxims.mindovermatter.longevitymind&pcampaignid=web_share" target="_blank"><AppStoreButton platform="google" /></Link>
             </div>
           </div>
 
